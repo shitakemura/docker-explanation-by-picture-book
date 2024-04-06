@@ -13,3 +13,7 @@ docker container run ruby ruby -e 'print 40 + 2'
 docker container run --name hello hello-world
 
 docker container rm hello
+
+## 7.3
+
+docker container run --name hello2 --rm hello-world

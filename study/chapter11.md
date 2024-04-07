@@ -15,3 +15,17 @@ docker container logs db
 psql --host=127.0.0.1 --port=5432 --username=postgres
 
 docker container logs --follow db
+
+## 11.2
+
+docker container exec db head -n 4 /etc/os-release
+
+docker container exec --interactive --tty db bash
+
+# 11.3
+
+docker container exec --interactive --tty db psql --host=127.0.0.1 --port=5432 --username=postgres
+
+docker container exec -it db bash
+
+psql --host 127.0.0.1 --port=5432 --username-postgres

@@ -25,3 +25,10 @@ insert into user ( id, name ) values ( 2, 'Jane Doe' );
 select * from user;
 
 docker container run --network my-network my-php:ping ping -c 3 -t 1 db
+
+docker image build --file ./Dockerfile23 --tag my-php:pdo_mysql .
+
+---
+
+docker container run --rm --mount type=bind,source="$(pwd)",target=/my-work --network my-network my-php:pdo_mysql php /my-work/main.php
+

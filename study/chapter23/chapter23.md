@@ -32,3 +32,17 @@ docker image build --file ./Dockerfile23 --tag my-php:pdo_mysql .
 
 docker container run --rm --mount type=bind,source="$(pwd)",target=/my-work --network my-network my-php:pdo_mysql php /my-work/main.php
 
+## 23.3
+
+docker container run --name called --rm --detach nginx:1.25
+
+docker container inspect called
+
+docker container run --name calling --rm my-php:ping ping -c 3 -t 1 172.17.0.2
+
+docker container run --name calling --rm --link called:web-server my-php:ping ping -c 3 -t 1 web-server
+
+docker container run --name calling --rm --interactive --tty --link called:web-server my-php:ping bash
+
+env | sort | grep WEB_SERVER_ENV_
+

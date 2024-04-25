@@ -23,3 +23,10 @@
 - docker container run --name hello hello-world
 - docker container ls --all
 - docker container rm hello
+
+## 7.3 コンテナ停止時に自動で削除する container run --rm
+
+#### コンテナの名前重複と修了済コンテナの自動削除
+
+- docker container run --name hello2 --rm hello-world
+- docker container ls --all

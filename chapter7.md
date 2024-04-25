@@ -15,3 +15,11 @@
 #### Rubyコンテナでインライン実行をする
 
 - docker container run ruby ruby -e 'print 40 + 2'
+
+## 7.2 コンテナに名前をつける container run --name
+
+#### コンテナの名前を自分で決める
+
+- docker container run --name hello hello-world
+- docker container ls --all
+- docker container rm hello

@@ -21,3 +21,12 @@
 - select current_user();
 
 - docker container stop db
+
+## 10.2 コンテナをバックグラウンドで実行する container run --detach
+
+#### コンテナを起動するたびにターミナルを切り替えたくない
+
+- docker container run --name db --rm --detach --env MYSQL_ROOT_PASSWORD=secret --env MYSQL_USER=app --env MYSQL_PASSWORD=pass1234 --env MYSQL_DATABASE=sample --publish 3306:3306 mysql
+
+- docker container ls
+- docker container stop db

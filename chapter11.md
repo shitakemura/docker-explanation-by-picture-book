@@ -19,3 +19,15 @@
 - docker container logs db
 
 - docker container logs --follow db
+
+## 11.2 起動中のコンテナに命令する container exec
+
+#### 起動中コンテナでコマンドを実行する
+
+- docker container exec db head -n 4 /etc/os-release
+
+#### 起動中コンテナでbashを実行する
+
+- docker container exec --interactive --tty db bash
+- cd /etc
+- head -n 4 os-release

@@ -31,3 +31,10 @@
 - docker container exec --interactive --tty db bash
 - cd /etc
 - head -n 4 os-release
+
+## 11.3 PostgreSQLサーバへの接続方法を整理する
+
+- docker container exec --interactive --tty db psql --host=127.0.0.1 --port=5432 --username=postgres
+
+- docker container exec --interactive --tty db bash
+- psql --host=127.0.0.1 --port=5432 --username=postgres

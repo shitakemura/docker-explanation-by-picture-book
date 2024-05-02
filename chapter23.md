@@ -30,3 +30,11 @@
 #### PHPコンテナからMySQLコンテナに通信できるか確認する
 
 - docker container run --network my-network my-php:ping ping -c 3 -t 1 db
+
+#### PHPコンテナでMySQLサーバに接続するコードを実装する
+
+- docker image build --file Dockerfile23.2 --tag my-php:pdo_mysql .
+
+#### PHPコンテナからMySQLコンテナに通信する
+
+- docker container run --rm --mount type=bind,source="$(pwd)",target=/my-work --network my-network my-php:pdo_mysql php /my-work/main.php

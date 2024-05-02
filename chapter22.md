@@ -17,3 +17,5 @@
 - rm /my-work/hello.rb
 - exit
 - ls
+
+## 22.2 ボリュームとバインドマウントの違い

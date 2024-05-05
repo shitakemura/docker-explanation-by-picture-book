@@ -16,6 +16,8 @@
 
 - docker volume create --name work-db-volume
 
-#### バインドマウント
+## 26.3 Mailコンテナを整理する
 
-#### ネットワーク
+#### ボリューム
+
+- docker volume create --name work-mail-volume

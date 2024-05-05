@@ -9,3 +9,13 @@
 #### ネットワーク
 
 - docker network create work-network
+
+## 26.2 DBコンテナを整理する
+
+#### ボリューム
+
+- docker volume create --name work-db-volume
+
+#### バインドマウント
+
+#### ネットワーク

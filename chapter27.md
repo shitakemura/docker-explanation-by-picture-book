@@ -13,3 +13,10 @@
 #### Mailコンテナの起動
 
 - docker container run --name mail --rm --detach --env TZ=Asia/Tokyo --env MP_DATA_FILE=/data/mailpit.db --publish 8025:8025 --mount type=volume,source=work-mail-volume,target=/data --network work-network axllent/mailpit:v1.10.1
+
+## 27.2 ブラウザを確認
+
+- http://localhost:8000
+- http://localhost:8025
+
+- docker container stop app db mail

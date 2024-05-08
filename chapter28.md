@@ -13,3 +13,8 @@
 
 - http://localhost:8000
 - http://localhost:8025
+
+#### コンテナ一覧の確認 - compose ps
+
+- docker container ls
+- docker compose ps

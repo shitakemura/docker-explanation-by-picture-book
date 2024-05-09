@@ -18,3 +18,15 @@
 
 - docker container ls
 - docker compose ps
+
+#### 起動中のコンテナでコマンドを実行 - compose exec
+
+- docker compose exec app bash
+
+#### コンテナの停止と削除 - compose down
+
+- docker compose down
+
+- docker compose up --detach --build
+- docker compose down --rmi all --volumes
+
